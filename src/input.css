@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  border-bottom: 1px solid #000209;
+}
+button {
+  border-radius: 10px;
+  padding: 4px 12px;
+  border: 1px solid rgb(6, 0, 0);
+
+  /* rounded-md px-3 py-1 border-secondary bg-lightblack mt-4 border-[1px] */
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+a,
+i {
+  cursor: pointer;
+}
+
+/* -------------- navbar ------------------ */
+
+.active {
+  position: relative;
+  transform: scale(1.1);
+}
+.active::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(3, 0, 0);
+}
+
+/* ------------------ header -------------------------- */
+
+header {
+  background: linear-gradient(rgba(101, 96, 96, 0.351), rgba(34, 7, 7, 0.219)),
+    url("../assets//download.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.homeexchange-container .leftbar {
+  grid-template-rows: 80% 20%;
+  align-items: center;
+}
+.homeexchange-container .leftbar h5 {
+  transform: rotate(90deg);
+  position: relative;
+}
+.homeexchange-container .leftbar h5::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  background: rgb(7, 0, 0);
+  top: 50%;
+  left: 110%;
+}
+.homeexchange-container .leftbar h5::before {
+  content: "";
+  width: 100px;
+  height: 0.5px;
+  position: absolute;
+  background: rgb(5, 0, 0);
+  bottom: 50%;
+  right: 110%;
+}
+.homeexchange-box {
+  grid-template-columns: 65% 35%;
+}
+.homeexchange-box .content h1 span {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+.homeexchange-box .background-slider .image {
+  opacity: 0.5;
+  aspect-ratio: 3/3;
+  object-fit: contain;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: rotateY(80deg);
+  transform: scale(0.8);
+}
+.homeexchange-box .background-slider .activeimg {
+  transform: rotateY("0");
+  transform: scale(0.9);
+  opacity: 0.7;
+  border: 1px solid black;
+}
+.homeexchange-box .imgsection .imgbox {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ///////////////////// main /////////////////// */
+
+/* ---------------- product-type section ---------------- */
+#product-type {
+  width: 100%;
+  height: 60vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+#product-type .boxes {
+  border-top: 1px solid black;
+}
+#product-type .boxes .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#product-type .boxes .content .text h5 span {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+#features .items {
+  transition: all 0.3s ease-in-out;
+}
+#features .items .products {
+  width: 16%;
+  background-color: #fbfbfe;
+  flex-shrink: 0;
+  height: 23rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  #product-type {
+    height: 30vh;
+  }
+  #features .items .products {
+    width: 22%;
+  }
+}
+
+#features .items .products h4 {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: black;
+}
+#features .items .products p {
+  font-size: 0.8rem;
+  color: #3c3c47;
+}
+#features .items .products h5 {
+  color: #090b31;
+  font-weight: bolder;
+  font-size: 1rem;
+  margin-top: 5px;
+  /* display: none; */
+}
+
+#features .items .products .image {
+  width: 100%;
+  /* height: 12rem; */
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#features .items .products .image img {
+  width: 100%;
+  aspect-ratio: 4/4;
+  object-fit: contain;
+}
+
+#sale .salebox {
+  grid-template-columns: 20% 70%;
+  gap: 10%;
+  background: #ffffffb4;
+}
+#sale .salebox .image img {
+  filter: drop-shadow(5px 10px 20px rgba(0, 0, 0, 0.903));
+}
+.saleactive{
+  color: black;
+}
+
+
+
+
+#user {
+  grid-template-columns: 50% 50%;
+}
+
+footer #footer-detail {
+  grid-template-columns: 15% 60% 25%;
+}
+footer #footer-detail .pages ul {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
