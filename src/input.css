@@ -140,6 +140,7 @@ header {
   height: 23rem;
   padding: 10px 15px;
   border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.297);
   overflow: hidden;
   text-align: left;
 }
@@ -190,9 +191,17 @@ header {
 }
 #sale .salebox .image img {
   filter: drop-shadow(5px 10px 20px rgba(0, 0, 0, 0.903));
+  animation: saleimage 2s infinite ease-in-out;
+}
+@keyframes saleimage {
+  
+  0% { filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903)) }
+  50% {filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.903))}
+  100%{filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903))}
 }
 .saleactive{
   color: black;
+  border-color: black;
 }
 
 
