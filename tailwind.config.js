@@ -12,7 +12,7 @@ module.exports = {
             secondary: "#040406",
             third : "#FDD835",
             extra: "#6069f0",
-            lightblack: "#3c3c47",
+            lightblack: "#464242",
             header: "#23232e",
           
         },
