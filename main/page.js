@@ -224,3 +224,26 @@ saleitems.forEach((item , i) =>{
 
 
 
+
+userboxes = document.querySelectorAll("#user .clients .imgslider .clientbox");
+
+userboxes.forEach((item , i)=>{
+
+    item.style.transform = `translateX(${i*100}%)`;
+})
+
+let utemp = 0;
+
+setInterval(() => {
+   
+    if(userboxes.length == utemp){
+        utemp = 0;
+    }
+
+    finalposition = -utemp*100 + '%';
+
+    document.querySelector("#user .clients .imgslider").style.transform = 'translateX('+finalposition+')';
+    
+    utemp++;
+
+}, 3000);
