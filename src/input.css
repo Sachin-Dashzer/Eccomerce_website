@@ -18,13 +18,12 @@ html::-webkit-scrollbar {
 section {
   border-bottom: 1px solid #000209;
 }
-button {
+/* button {
   border-radius: 10px;
   padding: 4px 12px;
   border: 1px solid rgb(6, 0, 0);
 
-  /* rounded-md px-3 py-1 border-secondary bg-lightblack mt-4 border-[1px] */
-}
+} */
 img {
   width: 100%;
   height: 100%;
@@ -84,6 +83,72 @@ header {
   bottom: 50%;
   right: 110%;
 }
+#header .leftbar .example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+#header .leftbar .example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -5px;
+  right: -40px;
+  transform: translateY(0%);
+  color: #fff;
+  background-color: black;
+  padding: 0px 6px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+#header .leftbar .example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: -60px;
+}
+#header .leftbar .example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+
+  margin-bottom: 20px;
+  
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #060606;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+}
+#header .leftbar .example-2 .icon-content a i {
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  /* width: 10px;
+  height: 10px; */
+}
+#header .leftbar .example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  color: rgb(252, 251, 251);
+  border: none;
+}
+#header .leftbar .example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+#header .leftbar .example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
 .homeexchange-box {
   grid-template-columns: 65% 35%;
 }
@@ -194,18 +259,20 @@ header {
   animation: saleimage 2s infinite ease-in-out;
 }
 @keyframes saleimage {
-  
-  0% { filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903)) }
-  50% {filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.903))}
-  100%{filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903))}
+  0% {
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.903));
+  }
+  100% {
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.903));
+  }
 }
-.saleactive{
+.saleactive {
   color: black;
   border-color: black;
 }
-
-
-
 
 #user {
   grid-template-columns: 50% 50%;
@@ -218,3 +285,11 @@ footer #footer-detail .pages ul {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
+
+
+
+
+
+
+
+
