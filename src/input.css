@@ -33,6 +33,55 @@ i {
   cursor: pointer;
 }
 
+
+
+
+button{
+  position: relative;
+  overflow: hidden;
+  background: rgb(251, 250, 250);
+  color: rgb(5, 5, 5);
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}
+
+button:after {
+  content: "";
+  background: rgb(11, 11, 11);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------- navbar ------------------ */
 
 .active {
@@ -112,7 +161,7 @@ header {
   display: flex;
 
   margin-bottom: 20px;
-  
+
   justify-content: center;
   align-items: center;
   width: 25px;
@@ -155,6 +204,15 @@ header {
 .homeexchange-box .content h1 span {
   text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
+.homeexchange-box .content button {
+  margin: 20px 0;
+  padding: 12px 26px;
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.681);
+  font-size: 16px;
+ 
+}
+
 .homeexchange-box .background-slider .image {
   opacity: 0.5;
   aspect-ratio: 3/3;
@@ -209,6 +267,8 @@ header {
   overflow: hidden;
   text-align: left;
 }
+
+
 @media (max-width: 1024px) {
   #product-type {
     height: 30vh;
@@ -285,11 +345,3 @@ footer #footer-detail .pages ul {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
-
-
-
-
-
-
-
-
