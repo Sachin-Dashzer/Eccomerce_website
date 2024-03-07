@@ -345,3 +345,24 @@ footer #footer-detail .pages ul {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
+
+
+
+
+#login .loginboxes{
+
+  background: linear-gradient(rgba(78, 36, 177, 0.222) , rgba(77, 14, 250, 0.304)) , url("../assets//login-background.jpg");
+  background-size: cover;
+  
+ 
+}
+
+#login .loginboxes .form{
+
+    background-color: rgba(253, 250, 250, 0.336);
+    backdrop-filter: blur(3px);
+
+}
+#login .loginboxes .form input{
+  width: 100%;
+}
