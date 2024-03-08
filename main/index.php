@@ -20,7 +20,7 @@
   <body class="bg-primary text-secondary">
     <!-- ------------------ navbar ------------------------------------- -->
 
-    <nav class="w-full h-[8rem] lg:h-20 z-10 lg:px-12 px-10 fixed top-0 left-0">
+    <nav class="w-full h-[8rem] bg-pink-300 transition-all ease-in-out lg:h-20 z-10 lg:px-12 px-10 fixed top-0 left-0">
       <div class="navbox w-full h-full flex items-center justify-between">
         <div class="box-1 lg:w-2/3 w-1/2 flex items-center gap-20">
           <h1 class="logo mr-10 lg:text-4xl text-6xl font-bold">GG</h1>
@@ -770,6 +770,11 @@
         </div>
       </section>
     </footer>
+
+    <?php
+
+        include("./login.php");
+    ?>
 
     <script src="./page.js"></script>
   </body>

@@ -112,7 +112,7 @@ fetch("https://fakestoreapi.com/products")
     })
     .then((data) => {
 
-        
+
 
         const firstproducts = document.querySelector('.products-1 .items');
         const secondproducts = document.querySelector('.products-2 .items');
@@ -161,26 +161,26 @@ fetch("https://fakestoreapi.com/products")
 
 let currentslider = 0;
 
-document.querySelector("#features .icons-1 .fa-angle-left").addEventListener("click" , ()=>{
+document.querySelector("#features .icons-1 .fa-angle-left").addEventListener("click", () => {
     currentslider = Math.max(currentslider - 1, 0);
     updateSlider();
 })
 
 
-document.querySelector("#features .icons-2 .fa-angle-left").addEventListener("click" , ()=>{
+document.querySelector("#features .icons-2 .fa-angle-left").addEventListener("click", () => {
     currentslider = Math.max(currentslider - 1, 0);
     updateSlider2();
 })
 
 
 
-document.querySelector("#features .icons-1 .fa-angle-right").addEventListener("click" , ()=>{
+document.querySelector("#features .icons-1 .fa-angle-right").addEventListener("click", () => {
 
     currentslider = Math.min(currentslider + 1, 2);
     updateSlider();
 })
 
-document.querySelector("#features .icons-2 .fa-angle-right").addEventListener("click" , ()=>{
+document.querySelector("#features .icons-2 .fa-angle-right").addEventListener("click", () => {
 
     currentslider = Math.min(currentslider + 1, 10);
     updateSlider2();
@@ -206,20 +206,20 @@ function updateSlider2() {
 
 saleitems = document.querySelectorAll("#sale .salebox .box-1 ul li");
 
-saleitems.forEach((item , i) =>{
-    
-    item.addEventListener("click" , function(){
-        
+saleitems.forEach((item, i) => {
+
+    item.addEventListener("click", function () {
+
         document.querySelector(".saleactive").classList.remove("saleactive");
         this.className += " saleactive";
 
 
-        document.querySelectorAll("#sale .salebox .box-2 .item").forEach((temp) =>{
+        document.querySelectorAll("#sale .salebox .box-2 .item").forEach((temp) => {
 
-            temp.style.transform = `translateY(-${i*100}%)`;
+            temp.style.transform = `translateY(-${i * 100}%)`;
         })
     })
-    
+
 })
 
 
@@ -227,23 +227,58 @@ saleitems.forEach((item , i) =>{
 
 userboxes = document.querySelectorAll("#user .clients .imgslider .clientbox");
 
-userboxes.forEach((item , i)=>{
+userboxes.forEach((item, i) => {
 
-    item.style.transform = `translateX(${i*100}%)`;
+    item.style.transform = `translateX(${i * 100}%)`;
 })
 
 let utemp = 0;
 
 setInterval(() => {
-   
-    if(userboxes.length == utemp){
+
+    if (userboxes.length == utemp) {
         utemp = 0;
     }
 
-    finalposition = -utemp*100 + '%';
+    finalposition = -utemp * 100 + '%';
 
-    document.querySelector("#user .clients .imgslider").style.transform = 'translateX('+finalposition+')';
-    
+    document.querySelector("#user .clients .imgslider").style.transform = 'translateX(' + finalposition + ')';
+
     utemp++;
 
 }, 3000);
+
+
+
+// if(window.scrollY >= 300){
+//     console.log("hello");
+// }
+
+
+
+let lastscroll = 0;
+
+window.addEventListener('scroll', (e) => {
+
+    if (window.scrollY > 300) {
+
+        if (window.scrollY > lastscroll) {
+
+            document.querySelector("nav").style.transform = `translateY(${-100}%)`;
+
+        } else {
+            document.querySelector("nav").style.transform = `translateY(${0}%)`;
+
+        }
+
+
+    }
+
+    else {
+        document.querySelector("nav").style.transform = `translateY(${0}%)`;
+
+    }
+
+    lastscroll = window.scrollY;
+
+})

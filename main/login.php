@@ -16,12 +16,12 @@
 
 
 
-<body class="text-primary bg-secondary">
+<body>
 
 
 
 
-    <section id="login" class="w-full h-[100vh] py-24 px-80">
+    <section id="login" class="w-full top-0 left-0 z-40 h-[100vh] py-24 px-80 backdrop-blur-md hidden text-primary">
         <div class="loginboxes h-full rounded-lg flex justify-evenly">
             <div class="img w-1/2 h-full px-12 py-16">
 
