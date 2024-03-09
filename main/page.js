@@ -1,9 +1,19 @@
 
+
+
+
+
+
+
+
+
+
+/////////////////////////////// navbar //////////////////
+
 let menu = document.querySelector("#menubar");
 let pages = document.querySelectorAll("#pages li");
 
 let menubar = true;
-
 
 function Rnavbar() {
 
@@ -16,19 +26,45 @@ function Rnavbar() {
     menubar = !menubar;
 }
 
-
-
 pages.forEach((items) => {
-
     items.addEventListener('click', () => {
-
         document.querySelector(".active").classList.remove("active");
-
         items.className += " active";
     })
+})
+
+
+
+let lastscroll = 0;
+window.addEventListener('scroll', (e) => {
+
+    console.log(window.scrollY);
+
+    if (window.scrollY > 560) {
+
+        if (window.scrollY > lastscroll) {
+
+            document.querySelector("nav").style.transform = `translateY(${-100}%)`;
+
+        } else {
+            document.querySelector("nav").style.position = `fixed`;
+            document.querySelector("nav").style.backgroundColor = `pink`;
+            document.querySelector("nav").style.transform = `translateY(${0}%)`;
+        }
+    }
+    else {
+        document.querySelector("nav").style.position = `absolute`;
+        document.querySelector("nav").style.backgroundColor = `transparent`;
+    }
+    lastscroll = window.scrollY;
 
 })
 
+
+document.querySelector("#loginbtn").addEventListener('click' , ()=>{
+
+    document.querySelector("#login").style.display = "block";
+})
 
 
 
@@ -255,30 +291,3 @@ setInterval(() => {
 // }
 
 
-
-let lastscroll = 0;
-
-window.addEventListener('scroll', (e) => {
-
-    if (window.scrollY > 300) {
-
-        if (window.scrollY > lastscroll) {
-
-            document.querySelector("nav").style.transform = `translateY(${-100}%)`;
-
-        } else {
-            document.querySelector("nav").style.transform = `translateY(${0}%)`;
-
-        }
-
-
-    }
-
-    else {
-        document.querySelector("nav").style.transform = `translateY(${0}%)`;
-
-    }
-
-    lastscroll = window.scrollY;
-
-})

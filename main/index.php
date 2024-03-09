@@ -20,7 +20,7 @@
   <body class="bg-primary text-secondary">
     <!-- ------------------ navbar ------------------------------------- -->
 
-    <nav class="w-full h-[8rem] bg-pink-300 transition-all ease-in-out lg:h-20 z-10 lg:px-12 px-10 fixed top-0 left-0">
+    <nav class="w-full h-[8rem] transition-all duration-75 ease-in-out lg:h-20 z-20 lg:px-12 px-10 top-0 absolute left-0">
       <div class="navbox w-full h-full flex items-center justify-between">
         <div class="box-1 lg:w-2/3 w-1/2 flex items-center gap-20">
           <h1 class="logo mr-10 lg:text-4xl text-6xl font-bold">GG</h1>
@@ -48,7 +48,7 @@
           <ul
             class="icons w-full flex justify-end lg:text-lg text-3xl font-bolder cursor-pointer"
           >
-            <li class="lg:ml-8 ml-12 hidden lg:inline"><span>Log in</span></li>
+            <li id="loginbtn" class="lg:ml-8 ml-12 hidden lg:inline"><span>Sign Up / Log in</span></li>
             <li class="lg:ml-8 ml-12"><i class="fa-solid fa-store"></i></li>
             <li class="lg:ml-8 ml-12">
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -437,7 +437,7 @@
         <div class="salebox grid h-full">
           <div class="box box-1 my-16 bg-slate-50 relative">
             <ul
-              class="z-20 text-left absolute cursor-pointer top-12 right-[-45%]"
+              class="z-10 text-left absolute cursor-pointer top-12 right-[-45%]"
             >
               <li
                 class="saleactive text-3xl border-b-2 border-pink-500 text-pink-500 font-semibold mb-12"
