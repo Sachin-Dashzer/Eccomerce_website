@@ -360,7 +360,7 @@ footer #footer-detail .pages ul {
 #login .loginboxes .form{
 
     background-color: rgba(253, 250, 250, 0.336);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
 
 }
 #login .loginboxes .form input{

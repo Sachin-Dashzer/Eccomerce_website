@@ -67,7 +67,6 @@ document.querySelector("#loginbtn").addEventListener('click' , ()=>{
 })
 
 
-
 // ------------------ header slider ----------------
 
 
@@ -148,7 +147,7 @@ fetch("https://fakestoreapi.com/products")
     })
     .then((data) => {
 
-
+        console.log(data);
 
         const firstproducts = document.querySelector('.products-1 .items');
         const secondproducts = document.querySelector('.products-2 .items');
